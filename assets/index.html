@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <style>
+    .collapsible {
+      background-color: #f7f5f8;
+      color: black;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 20px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: #e7dcdc;
+    }
+    
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1eded;
+    }
+    .fa-cloud{
+      color: black;
+    }
+    .fa-location-dot{
+      color: black;
+    }
+    .fa-fire-flame-curved{
+      color: black;
+    }
+    </style>
+    </head> 
+    <body>
+    
+    
+    
+    
+    <button class="collapsible"><i class="fa-solid fa-cloud"></i> First</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos similique nihil est quia veritatis rem nemo? <br> Ad consectetur aliquid dolore velit modi quos minima iure accusamus. Nostrum ea repudiandae expedita iusto! Provident nisi enim, voluptates voluptatum fugit maiores commodi vero, voluptas omnis eligendi perspiciatis?</p>
+    </div>
+    <button class="collapsible"><i class="fa-solid fa-location-dot"></i>  Second</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repudiandae atque et qui beatae eius iusto, libero ab <br>dolorem maiores amet, exercitationem ducimus illum, totam facere ratione esse quidem laboriosam. Reiciendis, officia fugit blanditiis harum, ratione maiores porro, eaque incidunt ipsam aliquid sapiente unde. Temporibus.</p>
+    </div>
+    <button class="collapsible"><i class="fa-solid fa-fire-flame-curved"></i>  Third</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, magnam officia, itaque ut illum accusantium laborum beatae <br>ipsa harum minima repellendus aut ad sit! Nemo voluptatem porro saepe nulla quibusdam autem placeat blanditiis aspernatur. Porro, beatae reiciendis quia consectetur tenetur eius dolorem perspiciatis rerum in.
+      </p>
+    </div>
+    
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
